@@ -1,5 +1,7 @@
 public class PhoneBook {
+    private int count = 0;
     public int add(String name, String number){
-        return 0;
+        count++;
+        return count;
     }
 }
