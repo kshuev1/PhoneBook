@@ -1,11 +1,20 @@
+import java.util.HashMap;
+import java.util.Map;
+import java.util.TreeMap;
+
 public class PhoneBook {
     private int count = 0;
+
+    private final Map<String, String> nameToNumber = new TreeMap<>();
+    private final Map<String, String> numberToName = new HashMap<>();
+
     public int add(String name, String number){
-        count++;
-        return count;
+        nameToNumber.put(name, number);
+        numberToName.put(number, name);
+        return nameToNumber.size();
     }
 
     public String findByNumber(String number){
-        return null;
+        return numberToName.get(number);
     }
 }
