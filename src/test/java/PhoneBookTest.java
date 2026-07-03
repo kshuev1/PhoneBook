@@ -1,6 +1,9 @@
 import org.junit.jupiter.api.Test;
 
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertIterableEquals;
 
 public class PhoneBookTest {
 
@@ -26,5 +29,19 @@ public class PhoneBookTest {
         phoneBook.add("Иван", "111");
 
         assertEquals("111", phoneBook.findByName("Иван"));
+    }
+
+    @Test
+    void testPrintAllNames() {
+        PhoneBook phoneBook = new PhoneBook();
+
+        phoneBook.add("Сергей", "333");
+        phoneBook.add("Анна", "111");
+        phoneBook.add("Борис", "222");
+
+        assertIterableEquals(
+                List.of("Анна", "Борис", "Сергей"),
+                phoneBook.printAllNames()
+        );
     }
 }

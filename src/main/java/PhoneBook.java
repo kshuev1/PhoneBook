@@ -1,5 +1,6 @@
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 import java.util.TreeMap;
 
 public class PhoneBook {
@@ -20,6 +21,10 @@ public class PhoneBook {
 
     public String findByName(String name) {
         return nameToNumber.get(name);
+    }
+
+    public Set<String> printAllNames() {
+        return null;
     }
 
 }
