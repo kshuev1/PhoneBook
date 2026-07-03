@@ -19,4 +19,12 @@ public class PhoneBookTest {
 
         assertEquals("Иван", phoneBook.findByNumber("111"));
     }
+
+    @Test
+    void testFindByName() {
+        PhoneBook phoneBook = new PhoneBook();
+        phoneBook.add("Иван", "111");
+
+        assertEquals("111", phoneBook.findByName("Иван"));
+    }
 }
