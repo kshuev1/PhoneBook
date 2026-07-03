@@ -4,4 +4,8 @@ public class PhoneBook {
         count++;
         return count;
     }
+
+    public String findByNumber(String number){
+        return null;
+    }
 }
